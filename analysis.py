@@ -705,7 +705,7 @@ def managerDescription(startDate, endDate, initial, returns, managerList, yrs_fu
 #
 #        dataframe = dataNew(fileUpload)
 
-st.markdown("<h1 style='text-align: left; color: teal; padding-left: 0px; font-size: 40px'><b>Manager Analysis<b></h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: left; color: teal; padding-left: 0px; font-size: 40px'><b>FX Analysis<b></h1>", unsafe_allow_html=True)
 st.markdown(" ")
 
 #fileUpload = st.file_uploader("File upload")
@@ -872,7 +872,7 @@ try:
 
     col8.plotly_chart(frontierEfficient)
 
-    st.markdown("<h1 style='text-align: left; color: #872657; padding-left: 0px; font-size: 40px'><b>Manager/Asset Analysis<b></h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: left; color: #872657; padding-left: 0px; font-size: 40px'><b>FX Analysis<b></h1>", unsafe_allow_html=True)
 
     col9, col10 = st.columns([1, 1])
     
@@ -918,10 +918,10 @@ try:
         min_value=0.0, max_value=1.0, value=(0.025, 0.975), step=0.025)
     
 
-    col10.markdown("<h1 style='text-align: left; color: black; padding-left: 0px; font-size: 20px'><b>MC Simulation - Single Manager/Asset<b></h1>", unsafe_allow_html=True)
+    col10.markdown("<h1 style='text-align: left; color: black; padding-left: 0px; font-size: 20px'><b>MC Simulation - Single Currency<b></h1>", unsafe_allow_html=True)
     #col10.write(" ")
     #col10.write(" ")
-    managerSelect = col10.selectbox('Single Manager/Asset', managerList)
+    managerSelect = col10.selectbox('Single Currency', managerList)
 
     indexVal = managerList.index(managerSelect)
 
@@ -1006,7 +1006,7 @@ try:
     col10.plotly_chart(distributionGraphs[indexVal])
 
 
-    col10.markdown("<h1 style='text-align: left; color: black; padding-left: 0px; font-size: 20px'><b>MC Results - Single Manager/Asset<b></h1>", unsafe_allow_html=True)
+    col10.markdown("<h1 style='text-align: left; color: black; padding-left: 0px; font-size: 20px'><b>MC Results - Single Currency<b></h1>", unsafe_allow_html=True)
     col10.write(" ")
 
     col10.write("There is a {} chance [{}-{} percentile] that the anuualized return of the portfolio"
